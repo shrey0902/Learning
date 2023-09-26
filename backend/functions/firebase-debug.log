@@ -1,0 +1,54 @@
+[debug] [2023-09-25T02:16:42.052Z] ----------------------------------------------------------------------
+[debug] [2023-09-25T02:16:42.057Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-09-25T02:16:42.058Z] CLI Version:   12.5.2
+[debug] [2023-09-25T02:16:42.058Z] Platform:      win32
+[debug] [2023-09-25T02:16:42.059Z] Node Version:  v18.15.0
+[debug] [2023-09-25T02:16:42.061Z] Time:          Mon Sep 25 2023 07:46:42 GMT+0530 (India Standard Time)
+[debug] [2023-09-25T02:16:42.062Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-09-25T02:16:42.093Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-09-25T02:16:42.424Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-09-25T02:16:42.425Z] > authorizing via signed-in user (sudhanshu@abexperiment.com)
+[debug] [2023-09-25T02:16:42.425Z] [iam] checking project nri-tax for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2023-09-25T02:16:42.428Z] > refreshing access token with scopes: []
+[debug] [2023-09-25T02:16:42.430Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-09-25T02:16:42.430Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-09-25T02:16:42.850Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2023-09-25T02:16:42.851Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-09-25T02:16:42.852Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/nri-tax:testIamPermissions [none]
+[debug] [2023-09-25T02:16:42.852Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/nri-tax:testIamPermissions x-goog-quota-user=projects/nri-tax
+[debug] [2023-09-25T02:16:42.853Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nri-tax:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2023-09-25T02:16:43.102Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-09-25T02:16:43.102Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-09-25T02:16:44.513Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/nri-tax:testIamPermissions 401
+[debug] [2023-09-25T02:16:44.514Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nri-tax:testIamPermissions {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"method":"google.cloudresourcemanager.v1.Projects.TestIamPermissions","service":"cloudresourcemanager.googleapis.com"}}]}}
+[debug] [2023-09-25T02:16:44.515Z] [iam] error while checking permissions, command may fail: FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2023-09-25T02:16:44.516Z] > refreshing access token with scopes: []
+[debug] [2023-09-25T02:16:44.517Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-09-25T02:16:44.517Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-09-25T02:16:44.731Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2023-09-25T02:16:44.732Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-09-25T02:16:44.732Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/nri-tax/serviceAccounts/nri-tax@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-09-25T02:16:44.732Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/nri-tax/serviceAccounts/nri-tax@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-09-25T02:16:46.354Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/nri-tax/serviceAccounts/nri-tax@appspot.gserviceaccount.com:testIamPermissions 401
+[debug] [2023-09-25T02:16:46.355Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/nri-tax/serviceAccounts/nri-tax@appspot.gserviceaccount.com:testIamPermissions {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"method":"google.iam.admin.v1.IAM.TestIamPermissions","service":"iam.googleapis.com"}}]}}
+[debug] [2023-09-25T02:16:46.355Z] [functions] service account IAM check errored, deploy may fail: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project. {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"method":"google.iam.admin.v1.IAM.TestIamPermissions","service":"iam.googleapis.com"}}]}},"response":{"statusCode":401}},"exit":1,"message":"HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":401}
+[info] 
+[info] === Deploying to 'nri-tax'...
+[info] 
+[info] i  deploying functions 
+[debug] [2023-09-25T02:16:46.366Z] > refreshing access token with scopes: []
+[debug] [2023-09-25T02:16:46.367Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-09-25T02:16:46.367Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-09-25T02:16:46.602Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2023-09-25T02:16:46.602Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-09-25T02:16:46.605Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nri-tax [none]
+[debug] [2023-09-25T02:16:47.160Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nri-tax 401
+[debug] [2023-09-25T02:16:47.160Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nri-tax {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2023-09-25T02:16:47.161Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2023-09-25T02:16:47.340Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at responseToError (C:\Users\SUDHANSHU\AppData\Roaming\nvm\v18.15.0\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\SUDHANSHU\AppData\Roaming\nvm\v18.15.0\node_modules\firebase-tools\lib\apiv2.js:285:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project nri-tax. Please make sure the project exists and your account has permission to access it.
